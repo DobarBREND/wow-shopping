@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wow!Shopping</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/icon2.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="./cart.js"></script>
+    <script src="https://kit.fontawesome.com/b8c04949af.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <!----- Header Section ------>
+    <header>
+        <div class="header_left">
+            <a href="#">Wow!Shopping</a>
+            <div class="header_left_p">
+                <p><a href="#">Explore</a><span><b><i>Plus<i class="fa-solid fa-plus"></i></i></b></span></p>
+            </div>
+        </div>
+
+        <div class="header_center">
+            <input class="header_center_input" type="text" placeholder="Search for products">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!--------Login Button ---------->
+        <div class="login">
+            <a href="#" class="login_btn">Login</a>
+            <div class="login_dropdown none">
+                <ul class="login_dropdown_list">
+                    <li class="login_drop_li sign_Li flex">
+                        <p class="new_login">New Customer</p>
+                        <a href="./signup.html" class="sign_up">Sign Up</a>
+                    </li>
+
+                    <li class="login_drop_li"><i class="fa-solid fa-circle-user"></i>My Profile</li>
+                    <li class="login_drop_li"><i class="fa-solid fa-square-plus"></i>Wow!Shopping Plus Zone</li>
+                    <li class="login_drop_li"><i class="fa-solid fa-bag-shopping"></i>Order</li>
+                    <li class="login_drop_li"><i class="fa-solid fa-heart"></i>Wish List</li>
+                    <li class="login_drop_li"><i class="fa-solid fa-money-bill-1"></i>Rewards</li>
+                    <li class="login_drop_li"><i class="fa-solid fa-gift"></i>Gift Cards</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!----More----->
+        <div class="more">
+            <span class="more_languages">More <i class="fa-solid fa-angle-down"></i></span>
+            <div class="more_dropdown none">
+                
+                <ul class="more_dropdown_list">
+                    <li class="login_drop_li"><i class="more_icon fa fa-bell"></i> Notification Preferences</li>
+                    <li class="login_drop_li"><i class="more_icon fa fa-shopping-basket"></i> Sell on Wow!Shopping</li>
+                    <li class="login_drop_li"><i class="more_icon fa fa-question"></i> 24/7 Customer Care</li>
+                    <li class="login_drop_li"><i class="more_icon fa fa-line-chart"></i> Advertise</li>
+                    <li class="login_drop_li"><i class="more_icon fa fa-download"></i> Download</li>
+                </ul>
+                
+            </div>
+        </div>
+            <!--------------------Cart---------------------------------->
+            <span class="cart_lan"><i class="fa-solid fa-cart-shopping" id="cart-icon"> Cart</i></span>
+            <div class="cart">
+                <h2 class="cart_title">Your Cart</h2>
+                <!-------Content------->
+                <div class="cart_content">
+                    <img src="./images/icon2.png" alt="" class="cart_img">
+                    <div class="detail_box">
+                        <div class="cart_product_title">Product1</div>
+                        <div class="cart_price">700</div>
+                        <input type="number" value="1" class="cart_quantity">
+                    </div>
+                    <!--Remove a product from the cart-->
+                    <i class="fa-solid fa-trash cart_remove"></i>
+
+                </div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total_title">Title</div>
+                    <div class="total_price"></div>
+                </div>
+
+                <button type="button" class="btn_buy">Buy Now</button>
+                <i class="fa-solid fa-rectangle-xmark" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <!------------ Category Section ---------------->
+    <section>
+            <div class="category_row">
+                <div class="category_col">
+                    <img src="./images/01. special-offer-small.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Top Offer</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/02. groceries-small.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Grocery</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/03. mobile-small1.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Mobile</h5>
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/04. fashion1-small.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Fashion</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/05. electronics-small1.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Electronics</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/06. home-small2.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Home</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/07. appliances-small2.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Appliances</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/08. travel-small3.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Travel</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+
+                <div class="category_col">
+                    <img src="./images/09. toys-small1.png" alt="">
+                    <div class="dropdown">
+                        <h5 class="dropbtn">Toys</h5>
+
+                        <div class="dropdown_content">
+                            <div class="header"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="product_title">Electronics</h3>
+                                    <a href="#">Smart Watch</a>
+                                    <a href="#">Camera</a>
+                                    <a href="#">Smart Home Automation</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">TV & Appliances</h3>
+                                    <a href="#">Smart Ultra HD</a>
+                                    <a href="#">Soundbars</a>
+                                    <a href="#">Set Top Boxes</a>
+                                </div>
+
+                                <div class="col">
+                                    <h3 class="product_title">Offer Zone</h3>
+                                    <a href="#">Immersion Rod</a>
+                                    <a href="#">Dish-washer</a>
+                                    <a href="#">Running Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--------Banner Section--------->
+    <section>
+            <div class="banner">
+                <div class="slider">
+                    <picture>
+                        <source media="(min-width:769px)" srcset="./images/banners/banner1.jpg">
+                        <source media="(min-width:468px)" srcset="./images/banners/banner1-768.jpg">
+                        <img src="./images/banners/banner1-468.jpg" alt="banner">
+                    </picture>
+                    
+                    <picture>
+                       <source media="(min-width:769px)" srcset="./images/banners/banner2.jpg">
+                        <source media="(min-width:468px)" srcset="./images/banners/banner2-768.jpg">
+                        <img src="./images/banners/banner2-468.jpg" alt="banner">
+                    </picture>
+
+                    <picture>
+                        <source media="(min-width:769px)" srcset="./images/banners/banner3.jpg">
+                        <source media="(min-width:468px)" srcset="./images/banners/banner3-768.jpg">
+                        <img src="./images/banners/banner3-468.jpg" alt="banner">
+                    </picture>
+
+                    <picture>
+                        <source media="(min-width:769px)" srcset="./images/banners/banner4.jpg">
+                        <source media="(min-width:468px)" srcset="./images/banners/banner4-768.jpg">
+                        <img src="./images/banners/banner4-468.jpg" alt="banner">
+                    </picture>
+
+                    <picture>
+                        <source media="(min-width:769px)" srcset="./images/banners/banner5.jpg">
+                        <source media="(min-width:468px)" srcset="./images/banners/banner5-768.jpg">
+                        <img src="./images/banners/banner5-468.jpg" alt="banner">
+                    </picture>
+                
+                </div>
+            </div>
+    </section>
+
+    <!-------ITEMS FOR ALL COMMON SECTIONS---------------->
+    <section>
+            <div class="card">
+                <div class="common_heading">
+                    <div class="common_heading_left">
+                        <h1>Deal Of The Day</h1>
+                        <i class="fa-duotone fa-timer"></i>
+                    </div>
+
+                    <div class="common_heading_right">
+                        <button>View All</button>
+                    </div>
+                </div>
+
+                <div class="common_row col_deals">
+                    <div class="common_col">
+                        <img src="./images/products/product1-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Sports Essential</h3>
+                        <h4>Up to 80% off</h4>
+                        <h6 class="price">Cycle, Football & More</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+                
+
+                    <div class="common_col">
+                        <img src="./images/products/product2-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Bata, Paragon Footwears</h3>
+                        <h4>Up to 60% off</h4>
+                        <h6 class="price">Sandals, SLippers & Flip-flops</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+                
+                    <div class="common_col">
+                        <img src="./images/products/product3-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Barware & Bakeware</h3>
+                        <h4>Up to 80% off</h4>
+                        <h6 class="price">Grab & Gone</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+            
+                    <div class="common_col">
+                        <img src="./images/products/product4-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Cars & Bikes</h3>
+                        <h4>Top Selling</h4>
+                        <h6 class="price">Start from <i class="fa-solid fa-dollar-sign"></i>299</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+                        
+                    <div class="common_col">
+                        <img src="./images/products/product5-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Best Of Hair Dryers</h3>
+                        <h4>Top Brands</h4>
+                        <h6 class="price">Start from <i class="fa-solid fa-dollar-sign"></i>479</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+            
+                    <div class="common_col">
+                        <img src="./images/products/product6-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Home Temples</h3>
+                        <h4>Extra 10% Off</h4>
+                        <h6 class="price">Savings Space Furniture</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+                
+                    <div class="common_col">
+                        <img src="./images/products/product7-small.png" alt="" class="product_img">
+                        <h3 class="product_title">Personal Care Essential</h3>
+                        <h4>Min 10% off + extra 15% off*</h4>
+                        <h6 class="price">Wisper, Colgate, Nivea & more</h6>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+                 </div>
+            </div>
+    </section>
+
+    <!------------------------------Mobile Section------------------------>
+
+    <section>
+        <div class="card">
+            <div class="common_heading">
+                <div class="common_heading_left">
+                    <h1>Best Battery Phones</h1>
+                    <h2>More than 4000mAh</h2>
+                    <i class="fa-duotone fa-timer"></i>
+                </div>
+
+                <div class="common_heading_right">
+                    <button>View All</button>
+                </div>
+            </div>
+
+            <div class="common_row col_mobiles">
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile1-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Realme C33</h3>
+                    <h4>5000 mAh Battery</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>170.19</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+            
+
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile2-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Realme 10</h3>
+                    <h4>5000 mAh Battery - 33W Fast Charging</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>196</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+            
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile3-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Readme 10A</h3>
+                    <h4>Battery Capacity 5000mAh</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>103.37</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+        
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile4-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Apple iPhone 14 Pro Max</h3>
+                    <h4>256GB (Deep Purple)</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>2099</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+                    
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile5-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Apple iPhone 14</h3>
+                    <h4>3279 mAh Battery - Fast Charging</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>802.44</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+        
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile6-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Apple iPhone 13 Pro</h3>
+                    <h4>3095 mAh Battery - Fast Charging</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>242.03</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+            
+                <div class="common_col">
+                    <img src="./images/mobiles/mobile7-small.png" alt="" class="product_img">
+                    <h3 class="product_title">Oppo F21s Pro 5G</h3>
+                    <h4>4,500 mAh/17.41 Wh</h4>
+                    <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>316.21</h6>
+                    <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                </div>
+             </div>
+        </div>
+</section>
+
+<!-------------------------------Men's Clothing-------------------------------------->
+
+<section>
+    <div class="card">
+        <div class="common_heading">
+            <div class="common_heading_left">
+                <h1>Top Picks On Men's Clothing</h1>
+                <h2>Up to 50% OFF</h2>
+                <i class="fa-duotone fa-timer"></i>
+            </div>
+
+            <div class="common_heading_right">
+                <button>View All</button>
+            </div>
+        </div>
+
+        <div class="common_row col_men">
+            <div class="common_col">
+                <img src="./images/clothing/clothing1-small.png" alt="" class="product_img">
+                <h3 class="product_title">Blue Denim Jeans</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>122.40</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+
+            <div class="common_col">
+                <img src="./images/clothing/clothing2-small.png" alt="" class="product_img">
+                <h3 class="product_title">T-shirt Casual Clothing </h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>139.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+            <div class="common_col">
+                <img src="./images/clothing/clothing3-small.png" alt="" class="product_img">
+                <h3 class="product_title">Jensen Denim Jeans</h3>
+                <h4>Up to 40% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>119.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+    
+            <div class="common_col">
+                <img src="./images/clothing/clothing4-small.png" alt="" class="product_img">
+                <h3 class="product_title">Blue Denim Jacket</h3>
+                <h4>Up to 30%-40% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>89.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+                
+            <div class="common_col">
+                <img src="./images/clothing/clothing5-small.png" alt="" class="product_img">
+                <h3 class="product_title">Bermuda Shorts</h3>
+                <h4>Top Brands</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>69.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+    
+            <div class="common_col">
+                <img src="./images/clothing/clothing6-small.png" alt="" class="product_img">
+                <h3 class="product_title">T-shirt Shirtdress</h3>
+                <h4>Flat 50% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>139.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+            <div class="common_col">
+                <img src="./images/clothing/clothing7-small.png" alt="" class="product_img">
+                <h3 class="product_title">Casual Shirt</h3>
+                <h4>Min 40%-60% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>99.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+         </div>
+    </div>
+</section>
+
+<!-----------------------------Furniture Bestseller-------------------------------->
+
+<section>
+    <div class="card">
+        <div class="common_heading">
+            <div class="common_heading_left">
+                <h1>Furniture Best Sellers</h1>
+                <h2>Up to 15% OFF</h2>
+                <i class="fa-duotone fa-timer"></i>
+            </div>
+
+            <div class="common_heading_right">
+                <button>View All</button>
+            </div>
+        </div>
+
+        <div class="common_row col_furniture">
+            <div class="common_col">
+                <img src="./images/furniture/furniture1-small.png" alt="" class="product_img">
+                <h3 class="product_title">Living Room Couch</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>799.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+
+            <div class="common_col">
+                <img src="./images/furniture/furniture2-small.png" alt="" class="product_img">
+                <h3 class="product_title">Couch</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>1599.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+            <div class="common_col">
+                <img src="./images/furniture/furniture3-small.png" alt="" class="product_img">
+                <h3 class="product_title">Loveseat</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>599.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+    
+            <div class="common_col">
+                <img src="./images/furniture/furniture4-small.png" alt="" class="product_img">
+                <h3 class="product_title">Eames Lounge Chair</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+                
+            <div class="common_col">
+                <img src="./images/furniture/furniture5-small.png" alt="" class="product_img">
+                <h3 class="product_title">Office & Desk Chair</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>499.99</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+    
+            <div class="common_col">
+                <img src="./images/furniture/furniture6-small.png" alt="" class="product_img">
+                <h3 class="product_title">Loveseat</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>399</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+            <div class="common_col">
+                <img src="./images/furniture/furniture7-small.png" alt="" class="product_img">
+                <h3 class="product_title">Eames Lounge Chair</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+         </div>
+    </div>
+</section>
+
+<!-----------------------------------Trending Offers--------------------------------->
+
+<section>
+    <div class="card">
+        <div class="common_heading">
+            <div class="common_heading_left">
+                <h1>Trending Offer</h1>
+                <h2>Up to 25% OFF</h2>
+                <i class="fa-duotone fa-timer"></i>
+            </div>
+
+            <div class="common_heading_right">
+                <button>View All</button>
+            </div>
+        </div>
+
+        <div class="common_row col_trending">
+            <div class="common_col">
+                <img src="./images/trending/trending1-small.png" alt="" class="product_img">
+                <h3 class="product_title">Printed T-Shirts</h3>
+                <h4>Latest</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>69</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+
+            <div class="common_col">
+                <img src="./images/trending/trending2-small.png" alt="" class="product_img">
+                <h3 class="product_title">Trendy Watch</h3>
+                <h4>New Arrival</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+            <div class="common_col">
+                <img src="./images/trending/trending3-small.png" alt="" class="product_img">
+                <h3 class="product_title">Rolex Analog Watch</h3>
+                <h4>Up to 20% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+    
+            <div class="common_col">
+                <img src="./images/trending/trending4-small.png" alt="" class="product_img">
+                <h3 class="product_title">Pocket Antique Watch</h3>
+                <h4>Top Brands</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+                
+            <div class="common_col">
+                <img src="./images/trending/trending5-small.png" alt="" class="product_img">
+                <h3 class="product_title">Wall Watch</h3>
+                <h4>Extra 10% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+    
+            <div class="common_col">
+                <img src="./images/trending/trending6-small.png" alt="" class="product_img">
+                <h3 class="product_title">Car Nexen Tire</h3>
+                <h4>Extra 10% Off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+        
+            <div class="common_col">
+                <img src="./images/trending/trending7-small.png" alt="" class="product_img">
+                <h3 class="product_title">Leather Backpack</h3>
+                <h4>Min 10% off</h4>
+                <h6 class="price"><i class="fa-solid fa-dollar-sign"></i>299</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+         </div>
+    </div>
+</section>
+
+<!----------------------Footer----------------------------------->
+
+<footer>
+    <div class="footer_row">
+        <div class="footer_col_1">
+            <div class="footer_heading">
+                <p>ABOUT</p>
+            </div>
+
+            <div class="footer_list">
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Stories</a>
+                <a href="#">Press</a>
+                <a href="#">Wholesale</a>
+            </div>
+        </div>
+
+        <div class="footer_col_2">
+            <div class="footer_heading">
+                <p>HELP</p>
+            </div>
+
+            <div class="footer_list">
+                <a href="#">Payments</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">FAQ</a>
+                <a href="#">Press</a>
+                <a href="#">Report Infringement</a>
+            </div>
+        </div>
+
+        <div class="footer_col_3">
+            <div class="footer_heading">
+                <p>POLICY</p>
+            </div>
+       
+            <div class="footer_list">
+                <a href="#">Return Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Sitemap</a>
+                <a href="#">ERP Compliance</a>
+            </div>
+        </div>
+
+        <div class="footer_col_4">
+            <div class="footer_heading">
+                <p>SOCIAL</p>
+            </div>
+
+            <div class="footer_list">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+
+        <div class="footer_col_5">
+            <div class="footer_heading">
+                <p>MAIL US</p>
+            </div>
+
+            <div class="footer_list">
+              <p>Wow!Shopping Ltd.
+                Street and number
+                County
+                State
+                City ZIP</p>
+            </div>
+        </div>
+
+        <div class="footer_col_6">
+            <div class="footer_heading">
+                <p>Registered Office Address</p>
+            </div>
+
+            <div class="footer_list_address">
+                <p>Wow!Shopping Ltd.</p>
+                <p>Street and number</p>
+                <p>County</p>
+                <p>State</p>
+                <p>City ZIP</p>
+                <p>CIN: US123456789ABSDEFG987</p>
+                <p>Mobile: <span>1800 256 95632</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_row2">
+        <div class="footer_row2_col">
+            <p><i class="fa-solid fa-bag-shopping"></i>Sell On Wow!Shopping</p>
+        </div>
+
+        <div class="footer_row2_col">
+            <p><i class="fa-sharp fa-solid fa-star"></i>Advertise</p>
+        </div>
+
+        <div class="footer_row2_col">
+            <p><i class="fa-sharp fa-solid fa-gift"></i>Gift Cards</p>
+        </div>
+
+        <div class="footer_row2_col">
+            <p><i class="fa-sharp fa-solid fa-circle-question"></i>Help Center</p>
+        </div>
+
+        <div class="footer_row2_col">
+            <p class="copyright">&copy; Vladimir Jovanović :: DobarBREND 2023</p>
+        </div>
+
+        <div class="footer_row2_col">
+            <img src="./images/banners/payment.png" alt="">
+        </div>
+    </div>
+    
+</footer>
+
+   
+</body>
+</html>
